@@ -1,0 +1,28 @@
+# master arcade dictionary
+
+prizes = {"stickers":50, "keychain":150, "plushie":500}
+print(prizes.keys())
+
+# total tickets counter
+totalticketsspent = 0
+
+# ask player for desired prize, until they type 'done'
+while True:
+    user_prize = input("Type your desired prize, then type 'done' when finished spending.")
+    
+    if user_prize in prizes:
+        if totalticketsspent < 1000:
+            totalticketsspent += prizes[user_prize]
+            print(f"You spent {totalticketsspent}")
+        else:
+            print("Ticket cap reached!")
+            break
+        
+    elif user_prize == 'done':
+        break
+        
+    elif user_prize not in prizes:
+        print("Not a valid prize, try again.")
+            
+
+# write ticket check if tickets > 1000
