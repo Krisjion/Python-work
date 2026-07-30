@@ -1,7 +1,7 @@
 # master arcade dictionary
 
 prizes = {"stickers":50, "keychain":150, "plushie":500}
-print(prizes.keys())
+print(prizes)
 
 # total tickets counter
 totalticketsspent = 0
