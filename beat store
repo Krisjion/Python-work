@@ -1,0 +1,26 @@
+# master beat dictionary
+beats = {"trap_loop":30, "boom_bap":25, "drill_art":40}
+print(beats.keys())
+
+# total cost
+total_cost = 0
+
+# ask user to type a beat name to add to cart, until they type 'checkout'
+while True:
+    user_input = input("select a beat or type checkout to get your total: ")
+
+    if user_input in beats:
+        total_cost += beats[user_input]
+        
+    elif user_input == 'checkout':
+        break
+        
+    elif user_input not in beats:
+        print("Not a valid beat name. Try again.")
+
+if total_cost > 50:
+    total_cost -= 5
+    print(f"Your total is {total_cost}, with a $5 discount for purchasing over 50.")
+
+else:
+    print(f"Your total is {total_cost}")
