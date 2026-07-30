@@ -1,6 +1,6 @@
 # master beat dictionary
 beats = {"trap_loop":30, "boom_bap":25, "drill_art":40}
-print(beats.keys())
+print(beats)
 
 # total cost
 total_cost = 0
