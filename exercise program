@@ -1,0 +1,23 @@
+# master exercise dictionary
+exercises = {"bench_press":10, "squat":12, "pullups":8}
+print(exercises.keys())
+
+# total rep counter
+total_reps = 0
+
+# ask user what exercise set they completed, until they type 'finish'
+while True:
+    user_input = input("Type the set, or type 'finish' to be done.")
+    
+    if user_input in exercises:
+        total_reps += exercises[user_input]
+        print(f"Your reps for this set were {exercises[user_input]}")
+        
+    elif user_input == 'finish':
+        print(f"Your total accumulated reps are {total_reps}")
+        break
+        
+    elif user_input not in exercises: 
+        print("Not a valid exercise name, try again.")
+
+# print amount of reps for specific set, then print final total reps after 'finish'
