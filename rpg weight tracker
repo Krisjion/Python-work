@@ -1,0 +1,25 @@
+# master rpg inventory dictionary
+loot_weights = {"iron_sword":15, "health_potion":2, "dragon_shield":35}
+print(loot_weights)
+
+# weight tracker
+totalweight = 0
+
+# ask player for desired items to pick up, until they type 'stop'
+while True:
+    user_item = input("Pick up an item, and type 'stop' when finished.")
+    
+    if user_item in loot_weights:
+        totalweight += loot_weights[user_item]
+        print(f"{loot_weights[user_item]} pounds added")
+        
+    elif user_item == 'stop':
+        print(f"Your total carrying weight is {totalweight}")
+        break
+    
+    elif user_item not in loot_weights:
+        print("Item ignored, weight unchanged.")
+
+# if item not recognized, say item ignored weight unchanged, print total weight carried after 'stop'
+
+
