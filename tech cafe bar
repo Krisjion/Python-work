@@ -1,0 +1,24 @@
+# master bar dictionary
+menu = {"espresso":3, "latte":5, "cold_brew":4, "muffin":3}
+
+print(menu)
+# order total
+sub_total = 0
+taxed_total = sub_total
+
+# ask customer for menu items until they type 'pay'
+
+while True:
+    user_menuselection = input("Type your desired menu item, and pay to checkout.")
+    
+    if user_menuselection in menu:
+        sub_total += menu[user_menuselection]
+        
+    elif user_menuselection == 'pay':
+        taxed_total = sub_total * 1.07
+        print(f"Your sub_total is {sub_total}, and your total after tax is {taxed_total:.2f}")
+        break
+        
+    elif user_menuselection not in menu:
+        print("Not a valid menu item, try again.")
+# 7% sales tax, display subtotal and taxed total
